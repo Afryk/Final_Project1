@@ -35,7 +35,17 @@ Mūsų naudotos biliotekos: Selenium, Pandas, Matplotlib, Folium.
 ### Map.py:
 
 1. Naudojant Folium ir Pandas bibliotekas sukūrėme interaktyvų Lietuvos žemėlapį, kuriame yra rodomi oro kokybes matuokliai.
+2. Naudojant geoJson URL https://public.opendatasoft.com/api/explore/v2.1/catalog/datasets/openaq/exports/geojson?lang=en&refine=country%3A%22LT%22&qv1=(LT)&timezone=Europe%2FHelsinki žemėlapyje nurodome Lietuvos lokaciją.
+3. Naudojant output.csv nurodome tikslias matavimo stočių kordinates ir kenksmingų medžiagų reikšmes.
+
+### Analize.py:
+
+1. Suradome skirtingų kenksmingų dalelių dienos vidurkį Lietuvoje.
+2. Procentaliai identifikavom labiausiai paplitusią kenksmingą medžiaga
+3. Identifikavom labiausiai užterštus lietuvos miestus.
 
 
-![Žemėlapis.JPG](C:\Users\andre\Documents\GitHub\Final_Project1\Screenshots\Žemėlapis.JPG "Žemėlapis.JPG")
-<img alt="Žemėlapis.JPG" height="500" src="C:\Users\andre\Documents\GitHub\Final_Project1\ScreenshotsŽemėlapis.JPG" title="Žemėlapis.JPG" width="600"/>
+### Išvada:
+
+Labiausiai dominuojanti kenksminga medžiaga Lietuvoje yra anglies dioksidas.
+Labiausiai užteršti Lietuvos miestai yra Panevežys, Klaipėda ir Šiauliai.
