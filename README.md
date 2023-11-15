@@ -45,7 +45,10 @@ Mūsų naudotos biliotekos: Selenium, Pandas, Matplotlib, Folium.
 3. Identifikavom labiausiai užterštus lietuvos miestus.
 
 
+
 ### Išvada:
 
 Labiausiai dominuojanti kenksminga medžiaga Lietuvoje yra anglies dioksidas.
 Labiausiai užteršti Lietuvos miestai yra Panevežys, Klaipėda ir Šiauliai.
+
+
