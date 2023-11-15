@@ -37,5 +37,5 @@ Mūsų naudotos biliotekos: Selenium, Pandas, Matplotlib, Folium.
 1. Naudojant Folium ir Pandas bibliotekas sukūrėme interaktyvų Lietuvos žemėlapį, kuriame yra rodomi oro kokybes matuokliai.
 
 
-![Žemėlapis.JPG](C:\Users\andre\Documents\GitHub\Final_Project1\Screenshots\Žemėlapis.JPG)
-<img src="C:\Users\andre\Documents\GitHub\Final_Project1\ScreenshotsŽemėlapis.JPG" alt="Žemėlapis.JPG" width="600"/>
+![Žemėlapis.JPG](C:\Users\andre\Documents\GitHub\Final_Project1\Screenshots\Žemėlapis.JPG "Žemėlapis.JPG")
+<img alt="Žemėlapis.JPG" height="500" src="C:\Users\andre\Documents\GitHub\Final_Project1\ScreenshotsŽemėlapis.JPG" title="Žemėlapis.JPG" width="600"/>
