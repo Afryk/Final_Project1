@@ -1,0 +1,1414 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_8ffeb741aa73626b03e6eeb5322c1992 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+        
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_8ffeb741aa73626b03e6eeb5322c1992" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_8ffeb741aa73626b03e6eeb5322c1992 = L.map(
+                "map_8ffeb741aa73626b03e6eeb5322c1992",
+                {
+                    center: [55.1735998, 23.8948016],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 7,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_993adb85b8fb268208c55f6c0b1fa2da = L.tileLayer(
+                "https://cartodb-basemaps-{s}.global.ssl.fastly.net/light_all/{z}/{x}/{y}.png",
+                {"attribution": "\u0026copy; \u003ca target=\"_blank\" href=\"http://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors \u0026copy; \u003ca target=\"_blank\" href=\"http://cartodb.com/attributions\"\u003eCartoDB\u003c/a\u003e, CartoDB \u003ca target=\"_blank\" href =\"http://cartodb.com/attributions\"\u003eattributions\u003c/a\u003e", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            );
+        
+    
+                tile_layer_993adb85b8fb268208c55f6c0b1fa2da.addTo(map_8ffeb741aa73626b03e6eeb5322c1992);
+    
+
+        function geo_json_1653ca6d346283450c453087cb01450b_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_1653ca6d346283450c453087cb01450b = L.geoJson(null, {
+                onEachFeature: geo_json_1653ca6d346283450c453087cb01450b_onEachFeature,
+            
+        });
+
+        function geo_json_1653ca6d346283450c453087cb01450b_add (data) {
+            geo_json_1653ca6d346283450c453087cb01450b
+                .addData(data);
+        }
+            geo_json_1653ca6d346283450c453087cb01450b_add({"features": [{"geometry": {"coordinates": [23.986222, 54.89512799949521], "type": "Point"}, "properties": {"city": "Kaunas", "country": "LT", "country_name_en": "Lithuania", "location": "LT00041", "measurements_lastupdated": "2023-11-15T06:00:00+02:00", "measurements_parameter": "NO2", "measurements_sourcename": "EEA Lithuania", "measurements_unit": "\u00b5g/m\u00b3", "measurements_value": 14.34375}, "type": "Feature"}, {"geometry": {"coordinates": [23.986222, 54.89512799949521], "type": "Point"}, "properties": {"city": "Kaunas", "country": "LT", "country_name_en": "Lithuania", "location": "LT00041", "measurements_lastupdated": "2023-11-15T06:00:00+02:00", "measurements_parameter": "PM2.5", "measurements_sourcename": "EEA Lithuania", "measurements_unit": "\u00b5g/m\u00b3", "measurements_value": 18.57999992}, "type": "Feature"}, {"geometry": {"coordinates": [21.17946, 55.6899999995005], "type": "Point"}, "properties": {"city": "Klaipeda", "country": "LT", "country_name_en": "Lithuania", "location": "LT00033", "measurements_lastupdated": "2023-11-15T06:00:00+02:00", "measurements_parameter": "O3", "measurements_sourcename": "EEA Lithuania", "measurements_unit": "\u00b5g/m\u00b3", "measurements_value": 42.70797923}, "type": "Feature"}, {"geometry": {"coordinates": [25.2108345, 54.6861114494939], "type": "Point"}, "properties": {"city": "Vilnius", "country": "LT", "country_name_en": "Lithuania", "location": "LT00002", "measurements_lastupdated": "2023-11-15T04:00:00+02:00", "measurements_parameter": "PM10", "measurements_sourcename": "EEA Lithuania", "measurements_unit": "\u00b5g/m\u00b3", "measurements_value": 16.54000091}, "type": "Feature"}, {"geometry": {"coordinates": [23.986222, 54.89512799949521], "type": "Point"}, "properties": {"city": "Kaunas", "country": "LT", "country_name_en": "Lithuania", "location": "LT00041", "measurements_lastupdated": "2023-11-15T06:00:00+02:00", "measurements_parameter": "CO", "measurements_sourcename": "EEA Lithuania", "measurements_unit": "\u00b5g/m\u00b3", "measurements_value": 279.40799}, "type": "Feature"}, {"geometry": {"coordinates": [23.30802727, 55.937835689502194], "type": "Point"}, "properties": {"city": "\u0160iauliai", "country": "LT", "country_name_en": "Lithuania", "location": "LT00022", "measurements_lastupdated": "2023-11-15T06:00:00+02:00", "measurements_parameter": "PM10", "measurements_sourcename": "EEA Lithuania", "measurements_unit": "\u00b5g/m\u00b3", "measurements_value": 11.14999961}, "type": "Feature"}, {"geometry": {"coordinates": [22.33139038, 56.3097228995048], "type": "Point"}, "properties": {"city": "Tel\u0161iai", "country": "LT", "country_name_en": "Lithuania", "location": "LT00023", "measurements_lastupdated": "2023-11-15T06:00:00+02:00", "measurements_parameter": "PM10", "measurements_sourcename": "EEA Lithuania", "measurements_unit": "\u00b5g/m\u00b3", "measurements_value": 2.85999989}, "type": "Feature"}, {"geometry": {"coordinates": [24.28972816, 54.0924987794903], "type": "Point"}, "properties": {"city": "Alytus", "country": "LT", "country_name_en": "Lithuania", "location": "LT00052", "measurements_lastupdated": "2023-11-15T06:00:00+02:00", "measurements_parameter": "O3", "measurements_sourcename": "EEA Lithuania", "measurements_unit": "\u00b5g/m\u00b3", "measurements_value": 24.14797076}, "type": "Feature"}, {"geometry": {"coordinates": [23.95778, 55.2799999994977], "type": "Point"}, "properties": {"city": "Kaunas", "country": "LT", "country_name_en": "Lithuania", "location": "LT00043", "measurements_lastupdated": "2023-11-15T06:00:00+02:00", "measurements_parameter": "NO2", "measurements_sourcename": "EEA Lithuania", "measurements_unit": "\u00b5g/m\u00b3", "measurements_value": 1.33874997}, "type": "Feature"}, {"geometry": {"coordinates": [25.2108345, 54.6861114494939], "type": "Point"}, "properties": {"city": "Vilnius", "country": "LT", "country_name_en": "Lithuania", "location": "LT00002", "measurements_lastupdated": "2023-11-15T05:00:00+02:00", "measurements_parameter": "SO2", "measurements_sourcename": "EEA Lithuania", "measurements_unit": "\u00b5g/m\u00b3", "measurements_value": 4.52353012}, "type": "Feature"}, {"geometry": {"coordinates": [23.8358345, 54.8836135894951], "type": "Point"}, "properties": {"city": "Kaunas", "country": "LT", "country_name_en": "Lithuania", "location": "LT00044", "measurements_lastupdated": "2023-11-15T06:00:00+02:00", "measurements_parameter": "NO2", "measurements_sourcename": "EEA Lithuania", "measurements_unit": "\u00b5g/m\u00b3", "measurements_value": 8.41500018}, "type": "Feature"}, {"geometry": {"coordinates": [26.00416946, 55.4633331294989], "type": "Point"}, "properties": {"city": "Utena", "country": "LT", "country_name_en": "Lithuania", "location": "LT00051", "measurements_lastupdated": "2023-11-15T06:00:00+02:00", "measurements_parameter": "PM2.5", "measurements_sourcename": "EEA Lithuania", "measurements_unit": "\u00b5g/m\u00b3", "measurements_value": 3.83999991}, "type": "Feature"}, {"geometry": {"coordinates": [23.986222, 54.89512799949521], "type": "Point"}, "properties": {"city": "Kaunas", "country": "LT", "country_name_en": "Lithuania", "location": "LT00041", "measurements_lastupdated": "2023-11-15T06:00:00+02:00", "measurements_parameter": "O3", "measurements_sourcename": "EEA Lithuania", "measurements_unit": "\u00b5g/m\u00b3", "measurements_value": 27.9398}, "type": "Feature"}, {"geometry": {"coordinates": [23.8358345, 54.8836135894951], "type": "Point"}, "properties": {"city": "Kaunas", "country": "LT", "country_name_en": "Lithuania", "location": "LT00044", "measurements_lastupdated": "2023-11-15T06:00:00+02:00", "measurements_parameter": "O3", "measurements_sourcename": "EEA Lithuania", "measurements_unit": "\u00b5g/m\u00b3", "measurements_value": 26.54281038}, "type": "Feature"}, {"geometry": {"coordinates": [23.30802727, 55.937835689502194], "type": "Point"}, "properties": {"city": "\u0160iauliai", "country": "LT", "country_name_en": "Lithuania", "location": "LT00022", "measurements_lastupdated": "2023-11-15T06:00:00+02:00", "measurements_parameter": "SO2", "measurements_sourcename": "EEA Lithuania", "measurements_unit": "\u00b5g/m\u00b3", "measurements_value": 3.45916987}, "type": "Feature"}, {"geometry": {"coordinates": [23.986222, 54.89512799949521], "type": "Point"}, "properties": {"city": "Kaunas", "country": "LT", "country_name_en": "Lithuania", "location": "LT00041", "measurements_lastupdated": "2023-11-15T06:00:00+02:00", "measurements_parameter": "PM10", "measurements_sourcename": "EEA Lithuania", "measurements_unit": "\u00b5g/m\u00b3", "measurements_value": 21.1800003}, "type": "Feature"}, {"geometry": {"coordinates": [22.33139038, 56.3097228995048], "type": "Point"}, "properties": {"city": "Tel\u0161iai", "country": "LT", "country_name_en": "Lithuania", "location": "LT00023", "measurements_lastupdated": "2023-11-15T06:00:00+02:00", "measurements_parameter": "NO2", "measurements_sourcename": "EEA Lithuania", "measurements_unit": "\u00b5g/m\u00b3", "measurements_value": 3.4424999}, "type": "Feature"}, {"geometry": {"coordinates": [24.283894, 55.0722219994964], "type": "Point"}, "properties": {"city": "Kaunas", "country": "LT", "country_name_en": "Lithuania", "location": "LT00042", "measurements_lastupdated": "2023-11-15T06:00:00+02:00", "measurements_parameter": "PM10", "measurements_sourcename": "EEA Lithuania", "measurements_unit": "\u00b5g/m\u00b3", "measurements_value": 36.00999832}, "type": "Feature"}, {"geometry": {"coordinates": [25.289443969999997, 54.7152786294941], "type": "Point"}, "properties": {"city": "Vilnius", "country": "LT", "country_name_en": "Lithuania", "location": "LT00003", "measurements_lastupdated": "2023-11-15T05:00:00+02:00", "measurements_parameter": "PM10", "measurements_sourcename": "EEA Lithuania", "measurements_unit": "\u00b5g/m\u00b3", "measurements_value": 21.79000091}, "type": "Feature"}, {"geometry": {"coordinates": [25.285186, 54.67762499949381], "type": "Point"}, "properties": {"city": "Vilnius", "country": "LT", "country_name_en": "Lithuania", "location": "LT00001", "measurements_lastupdated": "2023-11-15T05:00:00+02:00", "measurements_parameter": "NO2", "measurements_sourcename": "EEA Lithuania", "measurements_unit": "\u00b5g/m\u00b3", "measurements_value": 7.45875018}, "type": "Feature"}, {"geometry": {"coordinates": [25.248903, 54.6733329994938], "type": "Point"}, "properties": {"city": "Vilnius", "country": "LT", "country_name_en": "Lithuania", "location": "LT00004", "measurements_lastupdated": "2023-11-15T05:00:00+02:00", "measurements_parameter": "PM10", "measurements_sourcename": "EEA Lithuania", "measurements_unit": "\u00b5g/m\u00b3", "measurements_value": 18.79999923}, "type": "Feature"}, {"geometry": {"coordinates": [25.2108345, 54.6861114494939], "type": "Point"}, "properties": {"city": "Vilnius", "country": "LT", "country_name_en": "Lithuania", "location": "LT00002", "measurements_lastupdated": "2023-11-15T05:00:00+02:00", "measurements_parameter": "O3", "measurements_sourcename": "EEA Lithuania", "measurements_unit": "\u00b5g/m\u00b3", "measurements_value": 27.54066038}, "type": "Feature"}, {"geometry": {"coordinates": [25.289443969999997, 54.7152786294941], "type": "Point"}, "properties": {"city": "Vilnius", "country": "LT", "country_name_en": "Lithuania", "location": "LT00003", "measurements_lastupdated": "2023-11-15T05:00:00+02:00", "measurements_parameter": "CO", "measurements_sourcename": "EEA Lithuania", "measurements_unit": "\u00b5g/m\u00b3", "measurements_value": 186.27199}, "type": "Feature"}, {"geometry": {"coordinates": [23.8358345, 54.8836135894951], "type": "Point"}, "properties": {"city": "Kaunas", "country": "LT", "country_name_en": "Lithuania", "location": "LT00044", "measurements_lastupdated": "2023-11-15T06:00:00+02:00", "measurements_parameter": "PM2.5", "measurements_sourcename": "EEA Lithuania", "measurements_unit": "\u00b5g/m\u00b3", "measurements_value": 15.01000022}, "type": "Feature"}, {"geometry": {"coordinates": [22.33139038, 56.3097228995048], "type": "Point"}, "properties": {"city": "Tel\u0161iai", "country": "LT", "country_name_en": "Lithuania", "location": "LT00023", "measurements_lastupdated": "2023-11-15T06:00:00+02:00", "measurements_parameter": "SO2", "measurements_sourcename": "EEA Lithuania", "measurements_unit": "\u00b5g/m\u00b3", "measurements_value": 3.72525993}, "type": "Feature"}, {"geometry": {"coordinates": [25.2108345, 54.6861114494939], "type": "Point"}, "properties": {"city": "Vilnius", "country": "LT", "country_name_en": "Lithuania", "location": "LT00002", "measurements_lastupdated": "2023-11-15T05:00:00+02:00", "measurements_parameter": "NO2", "measurements_sourcename": "EEA Lithuania", "measurements_unit": "\u00b5g/m\u00b3", "measurements_value": 7.45875018}, "type": "Feature"}, {"geometry": {"coordinates": [23.986222, 54.89512799949521], "type": "Point"}, "properties": {"city": "Kaunas", "country": "LT", "country_name_en": "Lithuania", "location": "LT00041", "measurements_lastupdated": "2023-11-15T06:00:00+02:00", "measurements_parameter": "SO2", "measurements_sourcename": "EEA Lithuania", "measurements_unit": "\u00b5g/m\u00b3", "measurements_value": 14.63495}, "type": "Feature"}, {"geometry": {"coordinates": [23.8358345, 54.8836135894951], "type": "Point"}, "properties": {"city": "Kaunas", "country": "LT", "country_name_en": "Lithuania", "location": "LT00044", "measurements_lastupdated": "2023-11-15T06:00:00+02:00", "measurements_parameter": "CO", "measurements_sourcename": "EEA Lithuania", "measurements_unit": "\u00b5g/m\u00b3", "measurements_value": 256.12399000000005}, "type": "Feature"}, {"geometry": {"coordinates": [23.8358345, 54.8836135894951], "type": "Point"}, "properties": {"city": "Kaunas", "country": "LT", "country_name_en": "Lithuania", "location": "LT00044", "measurements_lastupdated": "2023-11-15T01:00:00+02:00", "measurements_parameter": "PM10", "measurements_sourcename": "EEA Lithuania", "measurements_unit": "\u00b5g/m\u00b3", "measurements_value": 30.969999}, "type": "Feature"}, {"geometry": {"coordinates": [23.95778, 55.2799999994977], "type": "Point"}, "properties": {"city": "Kaunas", "country": "LT", "country_name_en": "Lithuania", "location": "LT00043", "measurements_lastupdated": "2023-11-15T06:00:00+02:00", "measurements_parameter": "O3", "measurements_sourcename": "EEA Lithuania", "measurements_unit": "\u00b5g/m\u00b3", "measurements_value": 52.88605}, "type": "Feature"}, {"geometry": {"coordinates": [21.886947629999998, 56.0083351095027], "type": "Point"}, "properties": {"city": "Tel\u0161iai", "country": "LT", "country_name_en": "Lithuania", "location": "LT00053", "measurements_lastupdated": "2023-11-15T06:00:00+02:00", "measurements_parameter": "O3", "measurements_sourcename": "EEA Lithuania", "measurements_unit": "\u00b5g/m\u00b3", "measurements_value": 43.50625847}, "type": "Feature"}, {"geometry": {"coordinates": [25.248903, 54.6733329994938], "type": "Point"}, "properties": {"city": "Vilnius", "country": "LT", "country_name_en": "Lithuania", "location": "LT00004", "measurements_lastupdated": "2023-11-15T05:00:00+02:00", "measurements_parameter": "NO2", "measurements_sourcename": "EEA Lithuania", "measurements_unit": "\u00b5g/m\u00b3", "measurements_value": 7.45875018}, "type": "Feature"}, {"geometry": {"coordinates": [24.36557, 55.7249999995007], "type": "Point"}, "properties": {"city": "Paneve\u017eys", "country": "LT", "country_name_en": "Lithuania", "location": "LT00012", "measurements_lastupdated": "2023-11-15T05:00:00+02:00", "measurements_parameter": "O3", "measurements_sourcename": "EEA Lithuania", "measurements_unit": "\u00b5g/m\u00b3", "measurements_value": 45.9011}, "type": "Feature"}, {"geometry": {"coordinates": [24.36557, 55.7249999995007], "type": "Point"}, "properties": {"city": "Paneve\u017eys", "country": "LT", "country_name_en": "Lithuania", "location": "LT00012", "measurements_lastupdated": "2023-11-15T05:00:00+02:00", "measurements_parameter": "PM10", "measurements_sourcename": "EEA Lithuania", "measurements_unit": "\u00b5g/m\u00b3", "measurements_value": 5.30000019}, "type": "Feature"}, {"geometry": {"coordinates": [24.283894, 55.0722219994964], "type": "Point"}, "properties": {"city": "Kaunas", "country": "LT", "country_name_en": "Lithuania", "location": "LT00042", "measurements_lastupdated": "2023-11-15T06:00:00+02:00", "measurements_parameter": "NO2", "measurements_sourcename": "EEA Lithuania", "measurements_unit": "\u00b5g/m\u00b3", "measurements_value": 17.97749927}, "type": "Feature"}, {"geometry": {"coordinates": [21.141111, 55.7077779995006], "type": "Point"}, "properties": {"city": "Klaipeda", "country": "LT", "country_name_en": "Lithuania", "location": "LT00031", "measurements_lastupdated": "2023-11-15T06:00:00+02:00", "measurements_parameter": "PM10", "measurements_sourcename": "EEA Lithuania", "measurements_unit": "\u00b5g/m\u00b3", "measurements_value": 8.77000045}, "type": "Feature"}, {"geometry": {"coordinates": [25.285186, 54.67762499949381], "type": "Point"}, "properties": {"city": "Vilnius", "country": "LT", "country_name_en": "Lithuania", "location": "LT00001", "measurements_lastupdated": "2023-11-15T05:00:00+02:00", "measurements_parameter": "CO", "measurements_sourcename": "EEA Lithuania", "measurements_unit": "\u00b5g/m\u00b3", "measurements_value": 256.12399000000005}, "type": "Feature"}, {"geometry": {"coordinates": [21.141111, 55.7077779995006], "type": "Point"}, "properties": {"city": "Klaipeda", "country": "LT", "country_name_en": "Lithuania", "location": "LT00031", "measurements_lastupdated": "2023-11-15T06:00:00+02:00", "measurements_parameter": "NO2", "measurements_sourcename": "EEA Lithuania", "measurements_unit": "\u00b5g/m\u00b3", "measurements_value": 4.59000018}, "type": "Feature"}, {"geometry": {"coordinates": [21.141111, 55.7077779995006], "type": "Point"}, "properties": {"city": "Klaipeda", "country": "LT", "country_name_en": "Lithuania", "location": "LT00031", "measurements_lastupdated": "2023-11-15T06:00:00+02:00", "measurements_parameter": "CO", "measurements_sourcename": "EEA Lithuania", "measurements_unit": "\u00b5g/m\u00b3", "measurements_value": 232.84}, "type": "Feature"}, {"geometry": {"coordinates": [23.95778, 55.2799999994977], "type": "Point"}, "properties": {"city": "Kaunas", "country": "LT", "country_name_en": "Lithuania", "location": "LT00043", "measurements_lastupdated": "2023-11-15T06:00:00+02:00", "measurements_parameter": "PM10", "measurements_sourcename": "EEA Lithuania", "measurements_unit": "\u00b5g/m\u00b3", "measurements_value": 9.4499998}, "type": "Feature"}, {"geometry": {"coordinates": [21.141111, 55.7077779995006], "type": "Point"}, "properties": {"city": "Klaipeda", "country": "LT", "country_name_en": "Lithuania", "location": "LT00031", "measurements_lastupdated": "2023-11-15T06:00:00+02:00", "measurements_parameter": "SO2", "measurements_sourcename": "EEA Lithuania", "measurements_unit": "\u00b5g/m\u00b3", "measurements_value": 1.86262996}, "type": "Feature"}, {"geometry": {"coordinates": [23.8358345, 54.8836135894951], "type": "Point"}, "properties": {"city": "Kaunas", "country": "LT", "country_name_en": "Lithuania", "location": "LT00044", "measurements_lastupdated": "2023-11-15T06:00:00+02:00", "measurements_parameter": "SO2", "measurements_sourcename": "EEA Lithuania", "measurements_unit": "\u00b5g/m\u00b3", "measurements_value": 11.17577949}, "type": "Feature"}, {"geometry": {"coordinates": [25.285186, 54.67762499949381], "type": "Point"}, "properties": {"city": "Vilnius", "country": "LT", "country_name_en": "Lithuania", "location": "LT00001", "measurements_lastupdated": "2023-11-15T05:00:00+02:00", "measurements_parameter": "PM10", "measurements_sourcename": "EEA Lithuania", "measurements_unit": "\u00b5g/m\u00b3", "measurements_value": 21.12999916}, "type": "Feature"}, {"geometry": {"coordinates": [25.248903, 54.6733329994938], "type": "Point"}, "properties": {"city": "Vilnius", "country": "LT", "country_name_en": "Lithuania", "location": "LT00004", "measurements_lastupdated": "2023-11-15T05:00:00+02:00", "measurements_parameter": "CO", "measurements_sourcename": "EEA Lithuania", "measurements_unit": "\u00b5g/m\u00b3", "measurements_value": 279.40799}, "type": "Feature"}, {"geometry": {"coordinates": [24.36557, 55.7249999995007], "type": "Point"}, "properties": {"city": "Paneve\u017eys", "country": "LT", "country_name_en": "Lithuania", "location": "LT00012", "measurements_lastupdated": "2023-11-15T06:00:00+02:00", "measurements_parameter": "CO", "measurements_sourcename": "EEA Lithuania", "measurements_unit": "\u00b5g/m\u00b3", "measurements_value": 197.91400000000002}, "type": "Feature"}, {"geometry": {"coordinates": [21.17946, 55.6899999995005], "type": "Point"}, "properties": {"city": "Klaipeda", "country": "LT", "country_name_en": "Lithuania", "location": "LT00033", "measurements_lastupdated": "2023-11-15T06:00:00+02:00", "measurements_parameter": "NO2", "measurements_sourcename": "EEA Lithuania", "measurements_unit": "\u00b5g/m\u00b3", "measurements_value": 3.06000004}, "type": "Feature"}, {"geometry": {"coordinates": [26.00416946, 55.4633331294989], "type": "Point"}, "properties": {"city": "Utena", "country": "LT", "country_name_en": "Lithuania", "location": "LT00051", "measurements_lastupdated": "2023-11-15T06:00:00+02:00", "measurements_parameter": "O3", "measurements_sourcename": "EEA Lithuania", "measurements_unit": "\u00b5g/m\u00b3", "measurements_value": 29.13722076}, "type": "Feature"}, {"geometry": {"coordinates": [21.886947629999998, 56.0083351095027], "type": "Point"}, "properties": {"city": "Tel\u0161iai", "country": "LT", "country_name_en": "Lithuania", "location": "LT00053", "measurements_lastupdated": "2023-11-15T06:00:00+02:00", "measurements_parameter": "NO2", "measurements_sourcename": "EEA Lithuania", "measurements_unit": "\u00b5g/m\u00b3", "measurements_value": 3.25125009}, "type": "Feature"}, {"geometry": {"coordinates": [21.886947629999998, 56.0083351095027], "type": "Point"}, "properties": {"city": "Tel\u0161iai", "country": "LT", "country_name_en": "Lithuania", "location": "LT00053", "measurements_lastupdated": "2023-11-15T06:00:00+02:00", "measurements_parameter": "SO2", "measurements_sourcename": "EEA Lithuania", "measurements_unit": "\u00b5g/m\u00b3", "measurements_value": 2.12872003}, "type": "Feature"}, {"geometry": {"coordinates": [23.95778, 55.2799999994977], "type": "Point"}, "properties": {"city": "Kaunas", "country": "LT", "country_name_en": "Lithuania", "location": "LT00043", "measurements_lastupdated": "2023-11-15T06:00:00+02:00", "measurements_parameter": "SO2", "measurements_sourcename": "EEA Lithuania", "measurements_unit": "\u00b5g/m\u00b3", "measurements_value": 2.12872003}, "type": "Feature"}, {"geometry": {"coordinates": [23.30802727, 55.937835689502194], "type": "Point"}, "properties": {"city": "\u0160iauliai", "country": "LT", "country_name_en": "Lithuania", "location": "LT00022", "measurements_lastupdated": "2023-11-15T06:00:00+02:00", "measurements_parameter": "CO", "measurements_sourcename": "EEA Lithuania", "measurements_unit": "\u00b5g/m\u00b3", "measurements_value": 232.84}, "type": "Feature"}, {"geometry": {"coordinates": [21.17946, 55.6899999995005], "type": "Point"}, "properties": {"city": "Klaipeda", "country": "LT", "country_name_en": "Lithuania", "location": "LT00033", "measurements_lastupdated": "2023-11-15T06:00:00+02:00", "measurements_parameter": "CO", "measurements_sourcename": "EEA Lithuania", "measurements_unit": "\u00b5g/m\u00b3", "measurements_value": 151.34599}, "type": "Feature"}, {"geometry": {"coordinates": [25.289443969999997, 54.7152786294941], "type": "Point"}, "properties": {"city": "Vilnius", "country": "LT", "country_name_en": "Lithuania", "location": "LT00003", "measurements_lastupdated": "2023-11-15T05:00:00+02:00", "measurements_parameter": "O3", "measurements_sourcename": "EEA Lithuania", "measurements_unit": "\u00b5g/m\u00b3", "measurements_value": 19.55786038}, "type": "Feature"}, {"geometry": {"coordinates": [21.17946, 55.6899999995005], "type": "Point"}, "properties": {"city": "Klaipeda", "country": "LT", "country_name_en": "Lithuania", "location": "LT00033", "measurements_lastupdated": "2023-11-15T06:00:00+02:00", "measurements_parameter": "PM2.5", "measurements_sourcename": "EEA Lithuania", "measurements_unit": "\u00b5g/m\u00b3", "measurements_value": 5.07999992}, "type": "Feature"}, {"geometry": {"coordinates": [25.289443969999997, 54.7152786294941], "type": "Point"}, "properties": {"city": "Vilnius", "country": "LT", "country_name_en": "Lithuania", "location": "LT00003", "measurements_lastupdated": "2023-11-15T05:00:00+02:00", "measurements_parameter": "NO2", "measurements_sourcename": "EEA Lithuania", "measurements_unit": "\u00b5g/m\u00b3", "measurements_value": 21.99375}, "type": "Feature"}, {"geometry": {"coordinates": [23.30802727, 55.937835689502194], "type": "Point"}, "properties": {"city": "\u0160iauliai", "country": "LT", "country_name_en": "Lithuania", "location": "LT00022", "measurements_lastupdated": "2023-11-15T06:00:00+02:00", "measurements_parameter": "O3", "measurements_sourcename": "EEA Lithuania", "measurements_unit": "\u00b5g/m\u00b3", "measurements_value": 44.90325}, "type": "Feature"}, {"geometry": {"coordinates": [21.17946, 55.6899999995005], "type": "Point"}, "properties": {"city": "Klaipeda", "country": "LT", "country_name_en": "Lithuania", "location": "LT00033", "measurements_lastupdated": "2023-11-15T06:00:00+02:00", "measurements_parameter": "PM10", "measurements_sourcename": "EEA Lithuania", "measurements_unit": "\u00b5g/m\u00b3", "measurements_value": 7.40000009}, "type": "Feature"}, {"geometry": {"coordinates": [24.283894, 55.0722219994964], "type": "Point"}, "properties": {"city": "Kaunas", "country": "LT", "country_name_en": "Lithuania", "location": "LT00042", "measurements_lastupdated": "2023-11-15T06:00:00+02:00", "measurements_parameter": "O3", "measurements_sourcename": "EEA Lithuania", "measurements_unit": "\u00b5g/m\u00b3", "measurements_value": 27.54066038}, "type": "Feature"}, {"geometry": {"coordinates": [22.33139038, 56.3097228995048], "type": "Point"}, "properties": {"city": "Tel\u0161iai", "country": "LT", "country_name_en": "Lithuania", "location": "LT00023", "measurements_lastupdated": "2023-11-15T06:00:00+02:00", "measurements_parameter": "O3", "measurements_sourcename": "EEA Lithuania", "measurements_unit": "\u00b5g/m\u00b3", "measurements_value": 29.9355}, "type": "Feature"}, {"geometry": {"coordinates": [24.36557, 55.7249999995007], "type": "Point"}, "properties": {"city": "Paneve\u017eys", "country": "LT", "country_name_en": "Lithuania", "location": "LT00012", "measurements_lastupdated": "2023-11-15T05:00:00+02:00", "measurements_parameter": "NO2", "measurements_sourcename": "EEA Lithuania", "measurements_unit": "\u00b5g/m\u00b3", "measurements_value": 2.86875}, "type": "Feature"}, {"geometry": {"coordinates": [25.289443969999997, 54.7152786294941], "type": "Point"}, "properties": {"city": "Vilnius", "country": "LT", "country_name_en": "Lithuania", "location": "LT00003", "measurements_lastupdated": "2023-11-15T05:00:00+02:00", "measurements_parameter": "PM2.5", "measurements_sourcename": "EEA Lithuania", "measurements_unit": "\u00b5g/m\u00b3", "measurements_value": 19.38999938}, "type": "Feature"}, {"geometry": {"coordinates": [25.248903, 54.6733329994938], "type": "Point"}, "properties": {"city": "Vilnius", "country": "LT", "country_name_en": "Lithuania", "location": "LT00004", "measurements_lastupdated": "2023-11-15T05:00:00+02:00", "measurements_parameter": "SO2", "measurements_sourcename": "EEA Lithuania", "measurements_unit": "\u00b5g/m\u00b3", "measurements_value": 8.51488012}, "type": "Feature"}, {"geometry": {"coordinates": [23.30802727, 55.937835689502194], "type": "Point"}, "properties": {"city": "\u0160iauliai", "country": "LT", "country_name_en": "Lithuania", "location": "LT00022", "measurements_lastupdated": "2023-11-15T06:00:00+02:00", "measurements_parameter": "NO2", "measurements_sourcename": "EEA Lithuania", "measurements_unit": "\u00b5g/m\u00b3", "measurements_value": 8.60625}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+                geo_json_1653ca6d346283450c453087cb01450b.addTo(map_8ffeb741aa73626b03e6eeb5322c1992);
+    
+            var marker_fc29a1b11bb92a02a15c7e4b7f2eeb6d = L.marker(
+                [55.7077779995006, 21.141111],
+                {}
+            ).addTo(map_8ffeb741aa73626b03e6eeb5322c1992);
+        
+    
+        var popup_3a3e1a9104460c2d950d8865226a0159 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_6d9fe9e1ac9a4fc8c9ff790d9445c118 = $(`<div id="html_6d9fe9e1ac9a4fc8c9ff790d9445c118" style="width: 100.0%; height: 100.0%;">['LT00031', 'PM10', 22.37999916]</div>`)[0];
+                popup_3a3e1a9104460c2d950d8865226a0159.setContent(html_6d9fe9e1ac9a4fc8c9ff790d9445c118);
+            
+        
+
+        marker_fc29a1b11bb92a02a15c7e4b7f2eeb6d.bindPopup(popup_3a3e1a9104460c2d950d8865226a0159)
+        ;
+
+        
+    
+    
+            var marker_e2318a0463dff5fd9be3810102e704be = L.marker(
+                [56.3097228995048, 22.33139038],
+                {}
+            ).addTo(map_8ffeb741aa73626b03e6eeb5322c1992);
+        
+    
+        var popup_20361b061407f2c4d659e25cffc660ec = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_83620248fdb069cca60bf82aa139cf5a = $(`<div id="html_83620248fdb069cca60bf82aa139cf5a" style="width: 100.0%; height: 100.0%;">['LT00023', 'NO2', 5.16375009]</div>`)[0];
+                popup_20361b061407f2c4d659e25cffc660ec.setContent(html_83620248fdb069cca60bf82aa139cf5a);
+            
+        
+
+        marker_e2318a0463dff5fd9be3810102e704be.bindPopup(popup_20361b061407f2c4d659e25cffc660ec)
+        ;
+
+        
+    
+    
+            var marker_8560e49b14c76bf3e783737f7a5e084d = L.marker(
+                [54.6733329994938, 25.248903],
+                {}
+            ).addTo(map_8ffeb741aa73626b03e6eeb5322c1992);
+        
+    
+        var popup_9343fff708eed2b5d18069ce8390f58f = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_fe1fb4b8782d118d64168b2b0fc11dc8 = $(`<div id="html_fe1fb4b8782d118d64168b2b0fc11dc8" style="width: 100.0%; height: 100.0%;">['LT00004', 'NO2', 8.22375036]</div>`)[0];
+                popup_9343fff708eed2b5d18069ce8390f58f.setContent(html_fe1fb4b8782d118d64168b2b0fc11dc8);
+            
+        
+
+        marker_8560e49b14c76bf3e783737f7a5e084d.bindPopup(popup_9343fff708eed2b5d18069ce8390f58f)
+        ;
+
+        
+    
+    
+            var marker_7cca2407d9877bb7d50e77cbf61cc9b1 = L.marker(
+                [55.6899999995005, 21.17946],
+                {}
+            ).addTo(map_8ffeb741aa73626b03e6eeb5322c1992);
+        
+    
+        var popup_fda66e76deb962474e113082acf071a1 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_b33a3ba608cdca9d3cf5e2767791d925 = $(`<div id="html_b33a3ba608cdca9d3cf5e2767791d925" style="width: 100.0%; height: 100.0%;">['LT00033', 'PM2.5', 19.05999946]</div>`)[0];
+                popup_fda66e76deb962474e113082acf071a1.setContent(html_b33a3ba608cdca9d3cf5e2767791d925);
+            
+        
+
+        marker_7cca2407d9877bb7d50e77cbf61cc9b1.bindPopup(popup_fda66e76deb962474e113082acf071a1)
+        ;
+
+        
+    
+    
+            var marker_be848fc75ba9298fcc6a67d0b2417e4d = L.marker(
+                [55.2799999994977, 23.95778],
+                {}
+            ).addTo(map_8ffeb741aa73626b03e6eeb5322c1992);
+        
+    
+        var popup_c102a4bb0442fbd3e68f429fe51c30ba = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_30bfc42092f7e9e7c54eb290e2e99cf9 = $(`<div id="html_30bfc42092f7e9e7c54eb290e2e99cf9" style="width: 100.0%; height: 100.0%;">['LT00043', 'SO2', 2.12872003]</div>`)[0];
+                popup_c102a4bb0442fbd3e68f429fe51c30ba.setContent(html_30bfc42092f7e9e7c54eb290e2e99cf9);
+            
+        
+
+        marker_be848fc75ba9298fcc6a67d0b2417e4d.bindPopup(popup_c102a4bb0442fbd3e68f429fe51c30ba)
+        ;
+
+        
+    
+    
+            var marker_3b5c0de9793f7e49572cdc9b40da7121 = L.marker(
+                [54.6861114494939, 25.2108345],
+                {}
+            ).addTo(map_8ffeb741aa73626b03e6eeb5322c1992);
+        
+    
+        var popup_f59881ef644c71227b757fd2ac251b95 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_8086f4f4a5cf59cc3796f44610c6457b = $(`<div id="html_8086f4f4a5cf59cc3796f44610c6457b" style="width: 100.0%; height: 100.0%;">['LT00002', 'PM10', 19.88999938]</div>`)[0];
+                popup_f59881ef644c71227b757fd2ac251b95.setContent(html_8086f4f4a5cf59cc3796f44610c6457b);
+            
+        
+
+        marker_3b5c0de9793f7e49572cdc9b40da7121.bindPopup(popup_f59881ef644c71227b757fd2ac251b95)
+        ;
+
+        
+    
+    
+            var marker_c0fe3cae62583bc1c7a79dac51e62fec = L.marker(
+                [54.8836135894951, 23.8358345],
+                {}
+            ).addTo(map_8ffeb741aa73626b03e6eeb5322c1992);
+        
+    
+        var popup_d3c2db7757fb5c8b27faffd085154040 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_829c732273c86632c42782f4baadbd7d = $(`<div id="html_829c732273c86632c42782f4baadbd7d" style="width: 100.0%; height: 100.0%;">['LT00044', 'PM10', 32.25999832]</div>`)[0];
+                popup_d3c2db7757fb5c8b27faffd085154040.setContent(html_829c732273c86632c42782f4baadbd7d);
+            
+        
+
+        marker_c0fe3cae62583bc1c7a79dac51e62fec.bindPopup(popup_d3c2db7757fb5c8b27faffd085154040)
+        ;
+
+        
+    
+    
+            var marker_40bca84f811e796d5b025ae8ba6eb4d3 = L.marker(
+                [55.937835689502194, 23.30802727],
+                {}
+            ).addTo(map_8ffeb741aa73626b03e6eeb5322c1992);
+        
+    
+        var popup_40fe361156dc6078829c3bee6abbe1d1 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_40e353cd6a84c677c5c5049581fca5e0 = $(`<div id="html_40e353cd6a84c677c5c5049581fca5e0" style="width: 100.0%; height: 100.0%;">['LT00022', 'NO2', 3.06000004]</div>`)[0];
+                popup_40fe361156dc6078829c3bee6abbe1d1.setContent(html_40e353cd6a84c677c5c5049581fca5e0);
+            
+        
+
+        marker_40bca84f811e796d5b025ae8ba6eb4d3.bindPopup(popup_40fe361156dc6078829c3bee6abbe1d1)
+        ;
+
+        
+    
+    
+            var marker_3da81acef22a27927ca021d670356e15 = L.marker(
+                [55.0722219994964, 24.283894],
+                {}
+            ).addTo(map_8ffeb741aa73626b03e6eeb5322c1992);
+        
+    
+        var popup_5c2d06e2e00e55c3314c4f8062e54856 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_d0c003561cc6dda264002f795c2d0997 = $(`<div id="html_d0c003561cc6dda264002f795c2d0997" style="width: 100.0%; height: 100.0%;">['LT00042', 'O3', 20.75527923]</div>`)[0];
+                popup_5c2d06e2e00e55c3314c4f8062e54856.setContent(html_d0c003561cc6dda264002f795c2d0997);
+            
+        
+
+        marker_3da81acef22a27927ca021d670356e15.bindPopup(popup_5c2d06e2e00e55c3314c4f8062e54856)
+        ;
+
+        
+    
+    
+            var marker_02e2e353715e839a8a05c5b9afd15e2d = L.marker(
+                [55.2799999994977, 23.95778],
+                {}
+            ).addTo(map_8ffeb741aa73626b03e6eeb5322c1992);
+        
+    
+        var popup_4d7906d461b6cd56908fa71c50d222f8 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_5652b738e1e4dcd3bbdba9660590c329 = $(`<div id="html_5652b738e1e4dcd3bbdba9660590c329" style="width: 100.0%; height: 100.0%;">['LT00043', 'PM10', 21.37000083]</div>`)[0];
+                popup_4d7906d461b6cd56908fa71c50d222f8.setContent(html_5652b738e1e4dcd3bbdba9660590c329);
+            
+        
+
+        marker_02e2e353715e839a8a05c5b9afd15e2d.bindPopup(popup_4d7906d461b6cd56908fa71c50d222f8)
+        ;
+
+        
+    
+    
+            var marker_8add74c13460b1d30de990f40082cff4 = L.marker(
+                [55.6899999995005, 21.17946],
+                {}
+            ).addTo(map_8ffeb741aa73626b03e6eeb5322c1992);
+        
+    
+        var popup_20d072c6dabb03b02a30b9a405e3830d = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_6667b56c4097dcad88b82d97eeb2ef0c = $(`<div id="html_6667b56c4097dcad88b82d97eeb2ef0c" style="width: 100.0%; height: 100.0%;">['LT00033', 'NO2', 10.70999981]</div>`)[0];
+                popup_20d072c6dabb03b02a30b9a405e3830d.setContent(html_6667b56c4097dcad88b82d97eeb2ef0c);
+            
+        
+
+        marker_8add74c13460b1d30de990f40082cff4.bindPopup(popup_20d072c6dabb03b02a30b9a405e3830d)
+        ;
+
+        
+    
+    
+            var marker_849fd60399cd938bf1783dba1e5980d9 = L.marker(
+                [55.6899999995005, 21.17946],
+                {}
+            ).addTo(map_8ffeb741aa73626b03e6eeb5322c1992);
+        
+    
+        var popup_36c56b77232e16944915b56f28d50535 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_567eaa7702bafc99dfc063d3a37f933c = $(`<div id="html_567eaa7702bafc99dfc063d3a37f933c" style="width: 100.0%; height: 100.0%;">['LT00033', 'PM10', 22.04999923]</div>`)[0];
+                popup_36c56b77232e16944915b56f28d50535.setContent(html_567eaa7702bafc99dfc063d3a37f933c);
+            
+        
+
+        marker_849fd60399cd938bf1783dba1e5980d9.bindPopup(popup_36c56b77232e16944915b56f28d50535)
+        ;
+
+        
+    
+    
+            var marker_fe594877c99b5bec6115dc65c7cb9a79 = L.marker(
+                [55.0722219994964, 24.283894],
+                {}
+            ).addTo(map_8ffeb741aa73626b03e6eeb5322c1992);
+        
+    
+        var popup_6dc40f9c79d3a2fa4bdde7315d86b3cf = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_7536a32cc33b3fe3940493a1a3ffe1b4 = $(`<div id="html_7536a32cc33b3fe3940493a1a3ffe1b4" style="width: 100.0%; height: 100.0%;">['LT00042', 'PM10', 22.71999931]</div>`)[0];
+                popup_6dc40f9c79d3a2fa4bdde7315d86b3cf.setContent(html_7536a32cc33b3fe3940493a1a3ffe1b4);
+            
+        
+
+        marker_fe594877c99b5bec6115dc65c7cb9a79.bindPopup(popup_6dc40f9c79d3a2fa4bdde7315d86b3cf)
+        ;
+
+        
+    
+    
+            var marker_fe3088284c90dcfbe7750f67063ec92f = L.marker(
+                [55.2799999994977, 23.95778],
+                {}
+            ).addTo(map_8ffeb741aa73626b03e6eeb5322c1992);
+        
+    
+        var popup_e5f8345c80337aa333bc156e104afa50 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_81198bea42fbe884158ff0fa99c26a31 = $(`<div id="html_81198bea42fbe884158ff0fa99c26a31" style="width: 100.0%; height: 100.0%;">['LT00043', 'O3', 34.12647076]</div>`)[0];
+                popup_e5f8345c80337aa333bc156e104afa50.setContent(html_81198bea42fbe884158ff0fa99c26a31);
+            
+        
+
+        marker_fe3088284c90dcfbe7750f67063ec92f.bindPopup(popup_e5f8345c80337aa333bc156e104afa50)
+        ;
+
+        
+    
+    
+            var marker_03a312e26b88b57c934fc7a26039c063 = L.marker(
+                [54.67762499949381, 25.285186],
+                {}
+            ).addTo(map_8ffeb741aa73626b03e6eeb5322c1992);
+        
+    
+        var popup_58554697541245aa0d4d9c429d000e64 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_25b0e3a3eb8a0cce777db3eb0ea06a67 = $(`<div id="html_25b0e3a3eb8a0cce777db3eb0ea06a67" style="width: 100.0%; height: 100.0%;">['LT00001', 'CO', 232.84]</div>`)[0];
+                popup_58554697541245aa0d4d9c429d000e64.setContent(html_25b0e3a3eb8a0cce777db3eb0ea06a67);
+            
+        
+
+        marker_03a312e26b88b57c934fc7a26039c063.bindPopup(popup_58554697541245aa0d4d9c429d000e64)
+        ;
+
+        
+    
+    
+            var marker_f4247b7c43b4b303ba5b9f51ace81ee7 = L.marker(
+                [54.89512799949521, 23.986222],
+                {}
+            ).addTo(map_8ffeb741aa73626b03e6eeb5322c1992);
+        
+    
+        var popup_51c02901f530c27119d7f8b003a42625 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_4f1546d1d2eef0d22bad1fea92bc353f = $(`<div id="html_4f1546d1d2eef0d22bad1fea92bc353f" style="width: 100.0%; height: 100.0%;">['LT00041', 'NO2', 4.01624981]</div>`)[0];
+                popup_51c02901f530c27119d7f8b003a42625.setContent(html_4f1546d1d2eef0d22bad1fea92bc353f);
+            
+        
+
+        marker_f4247b7c43b4b303ba5b9f51ace81ee7.bindPopup(popup_51c02901f530c27119d7f8b003a42625)
+        ;
+
+        
+    
+    
+            var marker_751defea9ca407284ee96f4c1d727941 = L.marker(
+                [54.89512799949521, 23.986222],
+                {}
+            ).addTo(map_8ffeb741aa73626b03e6eeb5322c1992);
+        
+    
+        var popup_72c0914e5c79d73a4ecbeef17d2e24b5 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_b9d4163ff423d9629b40098c51ac0a0b = $(`<div id="html_b9d4163ff423d9629b40098c51ac0a0b" style="width: 100.0%; height: 100.0%;">['LT00041', 'PM2.5', 23.36000061]</div>`)[0];
+                popup_72c0914e5c79d73a4ecbeef17d2e24b5.setContent(html_b9d4163ff423d9629b40098c51ac0a0b);
+            
+        
+
+        marker_751defea9ca407284ee96f4c1d727941.bindPopup(popup_72c0914e5c79d73a4ecbeef17d2e24b5)
+        ;
+
+        
+    
+    
+            var marker_79cb4b7fd7e264c983a1e2a3c5db3a4f = L.marker(
+                [54.7152786294941, 25.28944397],
+                {}
+            ).addTo(map_8ffeb741aa73626b03e6eeb5322c1992);
+        
+    
+        var popup_3b7cb90182e61f18d64ea48162567eed = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_b21dc44ce7d2cc930bd8ae2a03530c6d = $(`<div id="html_b21dc44ce7d2cc930bd8ae2a03530c6d" style="width: 100.0%; height: 100.0%;">['LT00003', 'PM10', 12.6999998]</div>`)[0];
+                popup_3b7cb90182e61f18d64ea48162567eed.setContent(html_b21dc44ce7d2cc930bd8ae2a03530c6d);
+            
+        
+
+        marker_79cb4b7fd7e264c983a1e2a3c5db3a4f.bindPopup(popup_3b7cb90182e61f18d64ea48162567eed)
+        ;
+
+        
+    
+    
+            var marker_a716128932fd94992783c710d10cc4f8 = L.marker(
+                [55.0722219994964, 24.283894],
+                {}
+            ).addTo(map_8ffeb741aa73626b03e6eeb5322c1992);
+        
+    
+        var popup_6d14dfc6b4948cdfb08e92cb3f1dc496 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_f4c055c3ee0a7497d07dfea661344c3e = $(`<div id="html_f4c055c3ee0a7497d07dfea661344c3e" style="width: 100.0%; height: 100.0%;">['LT00042', 'NO2', 2.86875]</div>`)[0];
+                popup_6d14dfc6b4948cdfb08e92cb3f1dc496.setContent(html_f4c055c3ee0a7497d07dfea661344c3e);
+            
+        
+
+        marker_a716128932fd94992783c710d10cc4f8.bindPopup(popup_6d14dfc6b4948cdfb08e92cb3f1dc496)
+        ;
+
+        
+    
+    
+            var marker_8c0cf850d70d76cd9ab6de4824f9daf0 = L.marker(
+                [56.0083351095027, 21.88694763],
+                {}
+            ).addTo(map_8ffeb741aa73626b03e6eeb5322c1992);
+        
+    
+        var popup_40eea72b6ba95f7b7fd2cc9f389b0db3 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_b4a72d5f3d9d1c6856cf01995f2bbfa1 = $(`<div id="html_b4a72d5f3d9d1c6856cf01995f2bbfa1" style="width: 100.0%; height: 100.0%;">['LT00053', 'SO2', 2.6609]</div>`)[0];
+                popup_40eea72b6ba95f7b7fd2cc9f389b0db3.setContent(html_b4a72d5f3d9d1c6856cf01995f2bbfa1);
+            
+        
+
+        marker_8c0cf850d70d76cd9ab6de4824f9daf0.bindPopup(popup_40eea72b6ba95f7b7fd2cc9f389b0db3)
+        ;
+
+        
+    
+    
+            var marker_090fa0168e03c557d6032c7b79a7b621 = L.marker(
+                [55.7249999995007, 24.36557],
+                {}
+            ).addTo(map_8ffeb741aa73626b03e6eeb5322c1992);
+        
+    
+        var popup_9b075edd408d6aa51e54cb9feb1c089e = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_6c23bebe311de5d361aa2e59c0a12f85 = $(`<div id="html_6c23bebe311de5d361aa2e59c0a12f85" style="width: 100.0%; height: 100.0%;">['LT00012', 'CO', 232.84]</div>`)[0];
+                popup_9b075edd408d6aa51e54cb9feb1c089e.setContent(html_6c23bebe311de5d361aa2e59c0a12f85);
+            
+        
+
+        marker_090fa0168e03c557d6032c7b79a7b621.bindPopup(popup_9b075edd408d6aa51e54cb9feb1c089e)
+        ;
+
+        
+    
+    
+            var marker_606b7df279765b41aaec3fae743368f4 = L.marker(
+                [55.4633331294989, 26.00416946],
+                {}
+            ).addTo(map_8ffeb741aa73626b03e6eeb5322c1992);
+        
+    
+        var popup_a8241e690aadb34701343f072740ad10 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_3635bd111000820c8051dd3fa4efcfff = $(`<div id="html_3635bd111000820c8051dd3fa4efcfff" style="width: 100.0%; height: 100.0%;">['LT00051', 'PM2.5', 2.56999993]</div>`)[0];
+                popup_a8241e690aadb34701343f072740ad10.setContent(html_3635bd111000820c8051dd3fa4efcfff);
+            
+        
+
+        marker_606b7df279765b41aaec3fae743368f4.bindPopup(popup_a8241e690aadb34701343f072740ad10)
+        ;
+
+        
+    
+    
+            var marker_e038c16c272508f4b0b09100a44361be = L.marker(
+                [54.8836135894951, 23.8358345],
+                {}
+            ).addTo(map_8ffeb741aa73626b03e6eeb5322c1992);
+        
+    
+        var popup_c108d38f83c99eb68ff8d1cd8055b372 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_083f6c9dc193a5b3520a913485c1fd30 = $(`<div id="html_083f6c9dc193a5b3520a913485c1fd30" style="width: 100.0%; height: 100.0%;">['LT00044', 'NO2', 3.06000004]</div>`)[0];
+                popup_c108d38f83c99eb68ff8d1cd8055b372.setContent(html_083f6c9dc193a5b3520a913485c1fd30);
+            
+        
+
+        marker_e038c16c272508f4b0b09100a44361be.bindPopup(popup_c108d38f83c99eb68ff8d1cd8055b372)
+        ;
+
+        
+    
+    
+            var marker_41664bafc559cd2e3887f65308e02c92 = L.marker(
+                [55.2799999994977, 23.95778],
+                {}
+            ).addTo(map_8ffeb741aa73626b03e6eeb5322c1992);
+        
+    
+        var popup_1efd143fbb6878b8f645cffe9a19755f = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_7321df03fca6383dec11e8246b86d446 = $(`<div id="html_7321df03fca6383dec11e8246b86d446" style="width: 100.0%; height: 100.0%;">['LT00043', 'NO2', 1.33874997]</div>`)[0];
+                popup_1efd143fbb6878b8f645cffe9a19755f.setContent(html_7321df03fca6383dec11e8246b86d446);
+            
+        
+
+        marker_41664bafc559cd2e3887f65308e02c92.bindPopup(popup_1efd143fbb6878b8f645cffe9a19755f)
+        ;
+
+        
+    
+    
+            var marker_c754d3243c84d54fc964ca032378bccf = L.marker(
+                [54.67762499949381, 25.285186],
+                {}
+            ).addTo(map_8ffeb741aa73626b03e6eeb5322c1992);
+        
+    
+        var popup_b58e262ec2380db7cfc488889a7c4698 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_42d8fe0c615a003277cd642fe1a042ba = $(`<div id="html_42d8fe0c615a003277cd642fe1a042ba" style="width: 100.0%; height: 100.0%;">['LT00001', 'PM10', 20.40999984]</div>`)[0];
+                popup_b58e262ec2380db7cfc488889a7c4698.setContent(html_42d8fe0c615a003277cd642fe1a042ba);
+            
+        
+
+        marker_c754d3243c84d54fc964ca032378bccf.bindPopup(popup_b58e262ec2380db7cfc488889a7c4698)
+        ;
+
+        
+    
+    
+            var marker_0e97d13e63473b5a2cf9e7532a0dc5ef = L.marker(
+                [54.7152786294941, 25.28944397],
+                {}
+            ).addTo(map_8ffeb741aa73626b03e6eeb5322c1992);
+        
+    
+        var popup_0247f8304d29f4692806454abb158216 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_f3d672ef15fbf2394426dc4ffca2b118 = $(`<div id="html_f3d672ef15fbf2394426dc4ffca2b118" style="width: 100.0%; height: 100.0%;">['LT00003', 'CO', 174.63]</div>`)[0];
+                popup_0247f8304d29f4692806454abb158216.setContent(html_f3d672ef15fbf2394426dc4ffca2b118);
+            
+        
+
+        marker_0e97d13e63473b5a2cf9e7532a0dc5ef.bindPopup(popup_0247f8304d29f4692806454abb158216)
+        ;
+
+        
+    
+    
+            var marker_90374eb53ac41cdee64ad8bbb246eedd = L.marker(
+                [55.7249999995007, 24.36557],
+                {}
+            ).addTo(map_8ffeb741aa73626b03e6eeb5322c1992);
+        
+    
+        var popup_88ea450b1a3bc5df82861e80c9d22b89 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_64880aba3ef91ff0af78717c46275c4c = $(`<div id="html_64880aba3ef91ff0af78717c46275c4c" style="width: 100.0%; height: 100.0%;">['LT00012', 'NO2', 4.01624981]</div>`)[0];
+                popup_88ea450b1a3bc5df82861e80c9d22b89.setContent(html_64880aba3ef91ff0af78717c46275c4c);
+            
+        
+
+        marker_90374eb53ac41cdee64ad8bbb246eedd.bindPopup(popup_88ea450b1a3bc5df82861e80c9d22b89)
+        ;
+
+        
+    
+    
+            var marker_159484a31c23045a136d5123486815bd = L.marker(
+                [54.6733329994938, 25.248903],
+                {}
+            ).addTo(map_8ffeb741aa73626b03e6eeb5322c1992);
+        
+    
+        var popup_5554dbc8dadce3b6bd292bed4e5d9b82 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_d47d67d02ba48e17e98dac1a807a923e = $(`<div id="html_d47d67d02ba48e17e98dac1a807a923e" style="width: 100.0%; height: 100.0%;">['LT00004', 'CO', 244.48199]</div>`)[0];
+                popup_5554dbc8dadce3b6bd292bed4e5d9b82.setContent(html_d47d67d02ba48e17e98dac1a807a923e);
+            
+        
+
+        marker_159484a31c23045a136d5123486815bd.bindPopup(popup_5554dbc8dadce3b6bd292bed4e5d9b82)
+        ;
+
+        
+    
+    
+            var marker_018f41cf92f9782b66777a3d6038182c = L.marker(
+                [55.6899999995005, 21.17946],
+                {}
+            ).addTo(map_8ffeb741aa73626b03e6eeb5322c1992);
+        
+    
+        var popup_4f6db9dc78b4e030c68414e18d36fc56 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_7e44a6ada4a351f577ee10a71edf9716 = $(`<div id="html_7e44a6ada4a351f577ee10a71edf9716" style="width: 100.0%; height: 100.0%;">['LT00033', 'O3', 16.36473961]</div>`)[0];
+                popup_4f6db9dc78b4e030c68414e18d36fc56.setContent(html_7e44a6ada4a351f577ee10a71edf9716);
+            
+        
+
+        marker_018f41cf92f9782b66777a3d6038182c.bindPopup(popup_4f6db9dc78b4e030c68414e18d36fc56)
+        ;
+
+        
+    
+    
+            var marker_dc6a52220bba6ffba54e59d64b2d0322 = L.marker(
+                [54.89512799949521, 23.986222],
+                {}
+            ).addTo(map_8ffeb741aa73626b03e6eeb5322c1992);
+        
+    
+        var popup_be70b18e7ebd36b8909c4196df2efb26 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_274e4506295249503834f4a7db5e3129 = $(`<div id="html_274e4506295249503834f4a7db5e3129" style="width: 100.0%; height: 100.0%;">['LT00041', 'SO2', 14.1027705]</div>`)[0];
+                popup_be70b18e7ebd36b8909c4196df2efb26.setContent(html_274e4506295249503834f4a7db5e3129);
+            
+        
+
+        marker_dc6a52220bba6ffba54e59d64b2d0322.bindPopup(popup_be70b18e7ebd36b8909c4196df2efb26)
+        ;
+
+        
+    
+    
+            var marker_30a5c7e9f77f97ce878c69e49155fab0 = L.marker(
+                [54.6861114494939, 25.2108345],
+                {}
+            ).addTo(map_8ffeb741aa73626b03e6eeb5322c1992);
+        
+    
+        var popup_173d29c968d017bcad16b9a24002e9da = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_8b0e917482e0c45ea99d5bf1517dec10 = $(`<div id="html_8b0e917482e0c45ea99d5bf1517dec10" style="width: 100.0%; height: 100.0%;">['LT00002', 'NO2', 3.06000004]</div>`)[0];
+                popup_173d29c968d017bcad16b9a24002e9da.setContent(html_8b0e917482e0c45ea99d5bf1517dec10);
+            
+        
+
+        marker_30a5c7e9f77f97ce878c69e49155fab0.bindPopup(popup_173d29c968d017bcad16b9a24002e9da)
+        ;
+
+        
+    
+    
+            var marker_47e5d1125692a96c495458a9710b2536 = L.marker(
+                [54.8836135894951, 23.8358345],
+                {}
+            ).addTo(map_8ffeb741aa73626b03e6eeb5322c1992);
+        
+    
+        var popup_1d35df825720bce8475dfc0f6f215d6e = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_6874a1fcbbd31463a526c02d4260f50c = $(`<div id="html_6874a1fcbbd31463a526c02d4260f50c" style="width: 100.0%; height: 100.0%;">['LT00044', 'PM2.5', 7.78999996]</div>`)[0];
+                popup_1d35df825720bce8475dfc0f6f215d6e.setContent(html_6874a1fcbbd31463a526c02d4260f50c);
+            
+        
+
+        marker_47e5d1125692a96c495458a9710b2536.bindPopup(popup_1d35df825720bce8475dfc0f6f215d6e)
+        ;
+
+        
+    
+    
+            var marker_8e99988c8b40642c9b8249f1ca6f3f9b = L.marker(
+                [56.3097228995048, 22.33139038],
+                {}
+            ).addTo(map_8ffeb741aa73626b03e6eeb5322c1992);
+        
+    
+        var popup_006c2f1ef2ec3e4b380ef6a2eed721ba = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_ca2f69b7998990417a2c48b417030f9a = $(`<div id="html_ca2f69b7998990417a2c48b417030f9a" style="width: 100.0%; height: 100.0%;">['LT00023', 'SO2', 3.19308012]</div>`)[0];
+                popup_006c2f1ef2ec3e4b380ef6a2eed721ba.setContent(html_ca2f69b7998990417a2c48b417030f9a);
+            
+        
+
+        marker_8e99988c8b40642c9b8249f1ca6f3f9b.bindPopup(popup_006c2f1ef2ec3e4b380ef6a2eed721ba)
+        ;
+
+        
+    
+    
+            var marker_7f38398f6e914eb6157b1898445df13e = L.marker(
+                [54.7152786294941, 25.28944397],
+                {}
+            ).addTo(map_8ffeb741aa73626b03e6eeb5322c1992);
+        
+    
+        var popup_35bdd7052ed97425c0ee661d3bd59744 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_73db5d2efad5b551ea3dd7449a752f92 = $(`<div id="html_73db5d2efad5b551ea3dd7449a752f92" style="width: 100.0%; height: 100.0%;">['LT00003', 'NO2', 20.08125]</div>`)[0];
+                popup_35bdd7052ed97425c0ee661d3bd59744.setContent(html_73db5d2efad5b551ea3dd7449a752f92);
+            
+        
+
+        marker_7f38398f6e914eb6157b1898445df13e.bindPopup(popup_35bdd7052ed97425c0ee661d3bd59744)
+        ;
+
+        
+    
+    
+            var marker_486349129f9a5833e4f47531d600f2d6 = L.marker(
+                [55.937835689502194, 23.30802727],
+                {}
+            ).addTo(map_8ffeb741aa73626b03e6eeb5322c1992);
+        
+    
+        var popup_1e1a9c3f96d5c9a3241fff9a20587bd8 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_1352e7d5b043dc5bce36d45f86abf598 = $(`<div id="html_1352e7d5b043dc5bce36d45f86abf598" style="width: 100.0%; height: 100.0%;">['LT00022', 'SO2', 3.19308012]</div>`)[0];
+                popup_1e1a9c3f96d5c9a3241fff9a20587bd8.setContent(html_1352e7d5b043dc5bce36d45f86abf598);
+            
+        
+
+        marker_486349129f9a5833e4f47531d600f2d6.bindPopup(popup_1e1a9c3f96d5c9a3241fff9a20587bd8)
+        ;
+
+        
+    
+    
+            var marker_d549325f24db93b362f2692cf413fcbe = L.marker(
+                [54.6861114494939, 25.2108345],
+                {}
+            ).addTo(map_8ffeb741aa73626b03e6eeb5322c1992);
+        
+    
+        var popup_4c26e63b093944662b4be34b200960e0 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_2bbdd3dde4769a704452a9e1fc260e5f = $(`<div id="html_2bbdd3dde4769a704452a9e1fc260e5f" style="width: 100.0%; height: 100.0%;">['LT00002', 'O3', 21.15442076]</div>`)[0];
+                popup_4c26e63b093944662b4be34b200960e0.setContent(html_2bbdd3dde4769a704452a9e1fc260e5f);
+            
+        
+
+        marker_d549325f24db93b362f2692cf413fcbe.bindPopup(popup_4c26e63b093944662b4be34b200960e0)
+        ;
+
+        
+    
+    
+            var marker_8581c6cdbce06c59e6f865343209158c = L.marker(
+                [55.7077779995006, 21.141111],
+                {}
+            ).addTo(map_8ffeb741aa73626b03e6eeb5322c1992);
+        
+    
+        var popup_2da561623edc091206d75e7a4e3953d8 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_10a378c0a188d4a470f77921c2766589 = $(`<div id="html_10a378c0a188d4a470f77921c2766589" style="width: 100.0%; height: 100.0%;">['LT00031', 'NO2', 9.18000036]</div>`)[0];
+                popup_2da561623edc091206d75e7a4e3953d8.setContent(html_10a378c0a188d4a470f77921c2766589);
+            
+        
+
+        marker_8581c6cdbce06c59e6f865343209158c.bindPopup(popup_2da561623edc091206d75e7a4e3953d8)
+        ;
+
+        
+    
+    
+            var marker_cd21dee308cd074d28d6de155f337e03 = L.marker(
+                [54.6733329994938, 25.248903],
+                {}
+            ).addTo(map_8ffeb741aa73626b03e6eeb5322c1992);
+        
+    
+        var popup_7b6e80aaf40551e3c2dcef6fec37e722 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_ed13282bb874b600776ac76ed6bfe05b = $(`<div id="html_ed13282bb874b600776ac76ed6bfe05b" style="width: 100.0%; height: 100.0%;">['LT00004', 'PM10', 12.0]</div>`)[0];
+                popup_7b6e80aaf40551e3c2dcef6fec37e722.setContent(html_ed13282bb874b600776ac76ed6bfe05b);
+            
+        
+
+        marker_cd21dee308cd074d28d6de155f337e03.bindPopup(popup_7b6e80aaf40551e3c2dcef6fec37e722)
+        ;
+
+        
+    
+    
+            var marker_1fece5b190600243e1d8cf1d964415d8 = L.marker(
+                [55.7077779995006, 21.141111],
+                {}
+            ).addTo(map_8ffeb741aa73626b03e6eeb5322c1992);
+        
+    
+        var popup_94ffb1a3eea25ce3d015b42a5a30f3f9 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_46b08734124d0d34dabe52f2e67f8b05 = $(`<div id="html_46b08734124d0d34dabe52f2e67f8b05" style="width: 100.0%; height: 100.0%;">['LT00031', 'SO2', 2.12872003]</div>`)[0];
+                popup_94ffb1a3eea25ce3d015b42a5a30f3f9.setContent(html_46b08734124d0d34dabe52f2e67f8b05);
+            
+        
+
+        marker_1fece5b190600243e1d8cf1d964415d8.bindPopup(popup_94ffb1a3eea25ce3d015b42a5a30f3f9)
+        ;
+
+        
+    
+    
+            var marker_ff9516cc99efa744cc1c05cc34448064 = L.marker(
+                [54.8836135894951, 23.8358345],
+                {}
+            ).addTo(map_8ffeb741aa73626b03e6eeb5322c1992);
+        
+    
+        var popup_ad7bde77522d443752c27322b2eb08e2 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_d3ed0537c8ad45c76d35bc5bdabbf288 = $(`<div id="html_d3ed0537c8ad45c76d35bc5bdabbf288" style="width: 100.0%; height: 100.0%;">['LT00044', 'CO', 244.48199]</div>`)[0];
+                popup_ad7bde77522d443752c27322b2eb08e2.setContent(html_d3ed0537c8ad45c76d35bc5bdabbf288);
+            
+        
+
+        marker_ff9516cc99efa744cc1c05cc34448064.bindPopup(popup_ad7bde77522d443752c27322b2eb08e2)
+        ;
+
+        
+    
+    
+            var marker_a373f2f5c3b540e3f7aee7ebd9f193a3 = L.marker(
+                [56.0083351095027, 21.88694763],
+                {}
+            ).addTo(map_8ffeb741aa73626b03e6eeb5322c1992);
+        
+    
+        var popup_239402de44f46c66b410d2d7c4b37b10 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_0b9433d398efe811ddbcb4f66a13c741 = $(`<div id="html_0b9433d398efe811ddbcb4f66a13c741" style="width: 100.0%; height: 100.0%;">['LT00053', 'O3', 20.55571038]</div>`)[0];
+                popup_239402de44f46c66b410d2d7c4b37b10.setContent(html_0b9433d398efe811ddbcb4f66a13c741);
+            
+        
+
+        marker_a373f2f5c3b540e3f7aee7ebd9f193a3.bindPopup(popup_239402de44f46c66b410d2d7c4b37b10)
+        ;
+
+        
+    
+    
+            var marker_53555dc95e918d0869b4055347c13a8b = L.marker(
+                [54.8836135894951, 23.8358345],
+                {}
+            ).addTo(map_8ffeb741aa73626b03e6eeb5322c1992);
+        
+    
+        var popup_ec06e7c6a1497eb12f9bab7bfc925372 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_36806720c7252e9b8d75fd67b2741ca9 = $(`<div id="html_36806720c7252e9b8d75fd67b2741ca9" style="width: 100.0%; height: 100.0%;">['LT00044', 'SO2', 10.6436]</div>`)[0];
+                popup_ec06e7c6a1497eb12f9bab7bfc925372.setContent(html_36806720c7252e9b8d75fd67b2741ca9);
+            
+        
+
+        marker_53555dc95e918d0869b4055347c13a8b.bindPopup(popup_ec06e7c6a1497eb12f9bab7bfc925372)
+        ;
+
+        
+    
+    
+            var marker_5c4f33d1752a1b03d2136f0968219ce3 = L.marker(
+                [55.937835689502194, 23.30802727],
+                {}
+            ).addTo(map_8ffeb741aa73626b03e6eeb5322c1992);
+        
+    
+        var popup_a3d20b386c024a0511983ba0cd1a205e = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_2d569c0d749c5f15033c0b3ca58e34cb = $(`<div id="html_2d569c0d749c5f15033c0b3ca58e34cb" style="width: 100.0%; height: 100.0%;">['LT00022', 'PM10', 23.53000068]</div>`)[0];
+                popup_a3d20b386c024a0511983ba0cd1a205e.setContent(html_2d569c0d749c5f15033c0b3ca58e34cb);
+            
+        
+
+        marker_5c4f33d1752a1b03d2136f0968219ce3.bindPopup(popup_a3d20b386c024a0511983ba0cd1a205e)
+        ;
+
+        
+    
+    
+            var marker_66b6c014c0789e1123c42d24180bf2ad = L.marker(
+                [54.0924987794903, 24.28972816],
+                {}
+            ).addTo(map_8ffeb741aa73626b03e6eeb5322c1992);
+        
+    
+        var popup_3f309939db6918202814a3ac5cd4c857 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_784ec0c9c3cb5ec749011f82683e0d99 = $(`<div id="html_784ec0c9c3cb5ec749011f82683e0d99" style="width: 100.0%; height: 100.0%;">['LT00052', 'O3', 26.14367076]</div>`)[0];
+                popup_3f309939db6918202814a3ac5cd4c857.setContent(html_784ec0c9c3cb5ec749011f82683e0d99);
+            
+        
+
+        marker_66b6c014c0789e1123c42d24180bf2ad.bindPopup(popup_3f309939db6918202814a3ac5cd4c857)
+        ;
+
+        
+    
+    
+            var marker_b37c3ea73f99e8e9607b39e39a84b5cb = L.marker(
+                [54.89512799949521, 23.986222],
+                {}
+            ).addTo(map_8ffeb741aa73626b03e6eeb5322c1992);
+        
+    
+        var popup_1b14d17707542eb7ade923bebd2e6beb = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_9b2afeac09ebac02637276380b178215 = $(`<div id="html_9b2afeac09ebac02637276380b178215" style="width: 100.0%; height: 100.0%;">['LT00041', 'O3', 34.52560847]</div>`)[0];
+                popup_1b14d17707542eb7ade923bebd2e6beb.setContent(html_9b2afeac09ebac02637276380b178215);
+            
+        
+
+        marker_b37c3ea73f99e8e9607b39e39a84b5cb.bindPopup(popup_1b14d17707542eb7ade923bebd2e6beb)
+        ;
+
+        
+    
+    
+            var marker_abd0155052a496c57c8209adc371d07b = L.marker(
+                [54.89512799949521, 23.986222],
+                {}
+            ).addTo(map_8ffeb741aa73626b03e6eeb5322c1992);
+        
+    
+        var popup_8bef3a052c2a76304063e8a106ee499f = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_5345b0e143e121d105ef86ce52e1cb6e = $(`<div id="html_5345b0e143e121d105ef86ce52e1cb6e" style="width: 100.0%; height: 100.0%;">['LT00041', 'CO', 232.84]</div>`)[0];
+                popup_8bef3a052c2a76304063e8a106ee499f.setContent(html_5345b0e143e121d105ef86ce52e1cb6e);
+            
+        
+
+        marker_abd0155052a496c57c8209adc371d07b.bindPopup(popup_8bef3a052c2a76304063e8a106ee499f)
+        ;
+
+        
+    
+    
+            var marker_9ef587479d1ff36848fff93ec073667f = L.marker(
+                [56.3097228995048, 22.33139038],
+                {}
+            ).addTo(map_8ffeb741aa73626b03e6eeb5322c1992);
+        
+    
+        var popup_76ee7e92ba02ebd4ef8f70e7a26779aa = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_a2a10634595e2e9ad83af45c2528737f = $(`<div id="html_a2a10634595e2e9ad83af45c2528737f" style="width: 100.0%; height: 100.0%;">['LT00023', 'PM10', 12.02000045]</div>`)[0];
+                popup_76ee7e92ba02ebd4ef8f70e7a26779aa.setContent(html_a2a10634595e2e9ad83af45c2528737f);
+            
+        
+
+        marker_9ef587479d1ff36848fff93ec073667f.bindPopup(popup_76ee7e92ba02ebd4ef8f70e7a26779aa)
+        ;
+
+        
+    
+    
+            var marker_94d3176b177680d64b34255844f9dcc6 = L.marker(
+                [55.7249999995007, 24.36557],
+                {}
+            ).addTo(map_8ffeb741aa73626b03e6eeb5322c1992);
+        
+    
+        var popup_afe2379b2e5ba178b9ac59fb7db774fb = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_00e7d56187f0298f607342d6295e4b2a = $(`<div id="html_00e7d56187f0298f607342d6295e4b2a" style="width: 100.0%; height: 100.0%;">['LT00012', 'PM10', 19.69000053]</div>`)[0];
+                popup_afe2379b2e5ba178b9ac59fb7db774fb.setContent(html_00e7d56187f0298f607342d6295e4b2a);
+            
+        
+
+        marker_94d3176b177680d64b34255844f9dcc6.bindPopup(popup_afe2379b2e5ba178b9ac59fb7db774fb)
+        ;
+
+        
+    
+    
+            var marker_fcff0047b37b5cfe75759628845d42e1 = L.marker(
+                [55.4633331294989, 26.00416946],
+                {}
+            ).addTo(map_8ffeb741aa73626b03e6eeb5322c1992);
+        
+    
+        var popup_1b13499bb88bbdd32d994d11874e94de = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_5bde305c514f82204212b9ca19d74da5 = $(`<div id="html_5bde305c514f82204212b9ca19d74da5" style="width: 100.0%; height: 100.0%;">['LT00051', 'O3', 28.73807923]</div>`)[0];
+                popup_1b13499bb88bbdd32d994d11874e94de.setContent(html_5bde305c514f82204212b9ca19d74da5);
+            
+        
+
+        marker_fcff0047b37b5cfe75759628845d42e1.bindPopup(popup_1b13499bb88bbdd32d994d11874e94de)
+        ;
+
+        
+    
+    
+            var marker_cf395871746d944cf7bfc5d6535ea800 = L.marker(
+                [54.6861114494939, 25.2108345],
+                {}
+            ).addTo(map_8ffeb741aa73626b03e6eeb5322c1992);
+        
+    
+        var popup_4113a2ea3708e971cd96d6438cef0609 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_1bfa0dd1d563d05adf2302c3e700ebe4 = $(`<div id="html_1bfa0dd1d563d05adf2302c3e700ebe4" style="width: 100.0%; height: 100.0%;">['LT00002', 'SO2', 4.52353012]</div>`)[0];
+                popup_4113a2ea3708e971cd96d6438cef0609.setContent(html_1bfa0dd1d563d05adf2302c3e700ebe4);
+            
+        
+
+        marker_cf395871746d944cf7bfc5d6535ea800.bindPopup(popup_4113a2ea3708e971cd96d6438cef0609)
+        ;
+
+        
+    
+    
+            var marker_0d15a9df168afad3c480e6c042d89884 = L.marker(
+                [54.7152786294941, 25.28944397],
+                {}
+            ).addTo(map_8ffeb741aa73626b03e6eeb5322c1992);
+        
+    
+        var popup_0dc393e7e1ecd449eeb429e414d8efcc = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_0583fc8d47b6c2fd79897433e26965e6 = $(`<div id="html_0583fc8d47b6c2fd79897433e26965e6" style="width: 100.0%; height: 100.0%;">['LT00003', 'O3', 17.56216038]</div>`)[0];
+                popup_0dc393e7e1ecd449eeb429e414d8efcc.setContent(html_0583fc8d47b6c2fd79897433e26965e6);
+            
+        
+
+        marker_0d15a9df168afad3c480e6c042d89884.bindPopup(popup_0dc393e7e1ecd449eeb429e414d8efcc)
+        ;
+
+        
+    
+    
+            var marker_0db8b35a98cafdeba24d44122cc4c908 = L.marker(
+                [54.8836135894951, 23.8358345],
+                {}
+            ).addTo(map_8ffeb741aa73626b03e6eeb5322c1992);
+        
+    
+        var popup_473a4b07eb54a7eff933da3e5229fc30 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_4b647c58e71e38723a1e02240418a147 = $(`<div id="html_4b647c58e71e38723a1e02240418a147" style="width: 100.0%; height: 100.0%;">['LT00044', 'O3', 29.9355]</div>`)[0];
+                popup_473a4b07eb54a7eff933da3e5229fc30.setContent(html_4b647c58e71e38723a1e02240418a147);
+            
+        
+
+        marker_0db8b35a98cafdeba24d44122cc4c908.bindPopup(popup_473a4b07eb54a7eff933da3e5229fc30)
+        ;
+
+        
+    
+    
+            var marker_38660a67d8733d768c1f1e36219659d9 = L.marker(
+                [56.3097228995048, 22.33139038],
+                {}
+            ).addTo(map_8ffeb741aa73626b03e6eeb5322c1992);
+        
+    
+        var popup_975171663de2bcc2c710208545e313d3 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_de3af292822403e34f3f6d2ab23e37ad = $(`<div id="html_de3af292822403e34f3f6d2ab23e37ad" style="width: 100.0%; height: 100.0%;">['LT00023', 'O3', 14.76818019]</div>`)[0];
+                popup_975171663de2bcc2c710208545e313d3.setContent(html_de3af292822403e34f3f6d2ab23e37ad);
+            
+        
+
+        marker_38660a67d8733d768c1f1e36219659d9.bindPopup(popup_975171663de2bcc2c710208545e313d3)
+        ;
+
+        
+    
+    
+            var marker_6592a23c6eec85c7c358d24073fa4d76 = L.marker(
+                [55.937835689502194, 23.30802727],
+                {}
+            ).addTo(map_8ffeb741aa73626b03e6eeb5322c1992);
+        
+    
+        var popup_5b8e8ef029a9bcbcbbe4091e287dbe8c = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_750124643b66047bf63321e6ab30ac03 = $(`<div id="html_750124643b66047bf63321e6ab30ac03" style="width: 100.0%; height: 100.0%;">['LT00022', 'CO', 244.48199]</div>`)[0];
+                popup_5b8e8ef029a9bcbcbbe4091e287dbe8c.setContent(html_750124643b66047bf63321e6ab30ac03);
+            
+        
+
+        marker_6592a23c6eec85c7c358d24073fa4d76.bindPopup(popup_5b8e8ef029a9bcbcbbe4091e287dbe8c)
+        ;
+
+        
+    
+    
+            var marker_2f6799c87aff2b7f2e0efb34abfaf20b = L.marker(
+                [54.67762499949381, 25.285186],
+                {}
+            ).addTo(map_8ffeb741aa73626b03e6eeb5322c1992);
+        
+    
+        var popup_5eccb7ad82fc1ceff80b834ffbd644b6 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_6dc3a636249a176b11ebaa4925bc750c = $(`<div id="html_6dc3a636249a176b11ebaa4925bc750c" style="width: 100.0%; height: 100.0%;">['LT00001', 'NO2', 5.7375]</div>`)[0];
+                popup_5eccb7ad82fc1ceff80b834ffbd644b6.setContent(html_6dc3a636249a176b11ebaa4925bc750c);
+            
+        
+
+        marker_2f6799c87aff2b7f2e0efb34abfaf20b.bindPopup(popup_5eccb7ad82fc1ceff80b834ffbd644b6)
+        ;
+
+        
+    
+    
+            var marker_f471331c5f3cec708116ee6c449032ba = L.marker(
+                [56.0083351095027, 21.88694763],
+                {}
+            ).addTo(map_8ffeb741aa73626b03e6eeb5322c1992);
+        
+    
+        var popup_a5a5ec7d25506b3e69ae83263fd2040c = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_a81b7252f52a003ecb9d11fbd06fe27c = $(`<div id="html_a81b7252f52a003ecb9d11fbd06fe27c" style="width: 100.0%; height: 100.0%;">['LT00053', 'NO2', 5.54625018]</div>`)[0];
+                popup_a5a5ec7d25506b3e69ae83263fd2040c.setContent(html_a81b7252f52a003ecb9d11fbd06fe27c);
+            
+        
+
+        marker_f471331c5f3cec708116ee6c449032ba.bindPopup(popup_a5a5ec7d25506b3e69ae83263fd2040c)
+        ;
+
+        
+    
+    
+            var marker_0a32ac893881e37aa517277fa02ca1f6 = L.marker(
+                [54.89512799949521, 23.986222],
+                {}
+            ).addTo(map_8ffeb741aa73626b03e6eeb5322c1992);
+        
+    
+        var popup_604466379a56f5067d8f784bd427693f = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_bc114698147a54ccc0dd80b46e5d74d6 = $(`<div id="html_bc114698147a54ccc0dd80b46e5d74d6" style="width: 100.0%; height: 100.0%;">['LT00041', 'PM10', 26.65999984]</div>`)[0];
+                popup_604466379a56f5067d8f784bd427693f.setContent(html_bc114698147a54ccc0dd80b46e5d74d6);
+            
+        
+
+        marker_0a32ac893881e37aa517277fa02ca1f6.bindPopup(popup_604466379a56f5067d8f784bd427693f)
+        ;
+
+        
+    
+    
+            var marker_7112d9c93bfa80775a3149c3b23037a2 = L.marker(
+                [55.7077779995006, 21.141111],
+                {}
+            ).addTo(map_8ffeb741aa73626b03e6eeb5322c1992);
+        
+    
+        var popup_c17c938c0c9f889c71f33d83a7c0ca60 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_44e232a259a076b153b4d4e512d1d475 = $(`<div id="html_44e232a259a076b153b4d4e512d1d475" style="width: 100.0%; height: 100.0%;">['LT00031', 'CO', 314.33401]</div>`)[0];
+                popup_c17c938c0c9f889c71f33d83a7c0ca60.setContent(html_44e232a259a076b153b4d4e512d1d475);
+            
+        
+
+        marker_7112d9c93bfa80775a3149c3b23037a2.bindPopup(popup_c17c938c0c9f889c71f33d83a7c0ca60)
+        ;
+
+        
+    
+    
+            var marker_ac6fa50d153853aa8058d8aef63cf835 = L.marker(
+                [55.937835689502194, 23.30802727],
+                {}
+            ).addTo(map_8ffeb741aa73626b03e6eeb5322c1992);
+        
+    
+        var popup_2c6fb8d3c0e3154bf05bf3fa833187fb = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_55e9fc3a1fc2b3c582174028c59296bb = $(`<div id="html_55e9fc3a1fc2b3c582174028c59296bb" style="width: 100.0%; height: 100.0%;">['LT00022', 'O3', 28.13937076]</div>`)[0];
+                popup_2c6fb8d3c0e3154bf05bf3fa833187fb.setContent(html_55e9fc3a1fc2b3c582174028c59296bb);
+            
+        
+
+        marker_ac6fa50d153853aa8058d8aef63cf835.bindPopup(popup_2c6fb8d3c0e3154bf05bf3fa833187fb)
+        ;
+
+        
+    
+    
+            var marker_83031af3d8ddea11a56455e26d356b09 = L.marker(
+                [55.7249999995007, 24.36557],
+                {}
+            ).addTo(map_8ffeb741aa73626b03e6eeb5322c1992);
+        
+    
+        var popup_40de678bba179aa7e36696f56ca2af1b = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_6439b9e80ea1af01b49ddeca8708c79d = $(`<div id="html_6439b9e80ea1af01b49ddeca8708c79d" style="width: 100.0%; height: 100.0%;">['LT00012', 'O3', 22.55141038]</div>`)[0];
+                popup_40de678bba179aa7e36696f56ca2af1b.setContent(html_6439b9e80ea1af01b49ddeca8708c79d);
+            
+        
+
+        marker_83031af3d8ddea11a56455e26d356b09.bindPopup(popup_40de678bba179aa7e36696f56ca2af1b)
+        ;
+
+        
+    
+    
+            var marker_bed7e57e28650f591f9a7fb9812fce13 = L.marker(
+                [55.6899999995005, 21.17946],
+                {}
+            ).addTo(map_8ffeb741aa73626b03e6eeb5322c1992);
+        
+    
+        var popup_81c2ceb984774cc7a2a575e83ee8764a = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_ba3f9556d60953308967e7a2dd9d5abe = $(`<div id="html_ba3f9556d60953308967e7a2dd9d5abe" style="width: 100.0%; height: 100.0%;">['LT00033', 'CO', 221.19799]</div>`)[0];
+                popup_81c2ceb984774cc7a2a575e83ee8764a.setContent(html_ba3f9556d60953308967e7a2dd9d5abe);
+            
+        
+
+        marker_bed7e57e28650f591f9a7fb9812fce13.bindPopup(popup_81c2ceb984774cc7a2a575e83ee8764a)
+        ;
+
+        
+    
+    
+            var marker_a9944ba93f955456d9bdca88cd70a421 = L.marker(
+                [54.6733329994938, 25.248903],
+                {}
+            ).addTo(map_8ffeb741aa73626b03e6eeb5322c1992);
+        
+    
+        var popup_9219c35e58bfb13a6a89deb2c8f438f6 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_abdb77d53715d4c55a5e619c7a773658 = $(`<div id="html_abdb77d53715d4c55a5e619c7a773658" style="width: 100.0%; height: 100.0%;">['LT00004', 'SO2', 8.24878974]</div>`)[0];
+                popup_9219c35e58bfb13a6a89deb2c8f438f6.setContent(html_abdb77d53715d4c55a5e619c7a773658);
+            
+        
+
+        marker_a9944ba93f955456d9bdca88cd70a421.bindPopup(popup_9219c35e58bfb13a6a89deb2c8f438f6)
+        ;
+
+        
+    
+    
+            var marker_eff85eba2288555649fad7eddcc6eba8 = L.marker(
+                [54.7152786294941, 25.28944397],
+                {}
+            ).addTo(map_8ffeb741aa73626b03e6eeb5322c1992);
+        
+    
+        var popup_0b12cb264c9a2272820bdc93c84249ec = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_c4f45e9093066b9b3d1aa70b8dadda47 = $(`<div id="html_c4f45e9093066b9b3d1aa70b8dadda47" style="width: 100.0%; height: 100.0%;">['LT00003', 'PM2.5', 11.07999992]</div>`)[0];
+                popup_0b12cb264c9a2272820bdc93c84249ec.setContent(html_c4f45e9093066b9b3d1aa70b8dadda47);
+            
+        
+
+        marker_eff85eba2288555649fad7eddcc6eba8.bindPopup(popup_0b12cb264c9a2272820bdc93c84249ec)
+        ;
+
+        
+    
+</script>
+</html>
